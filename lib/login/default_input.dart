@@ -38,7 +38,7 @@ class _DefaultInputState extends State<DefaultInput> {
     return Container(
       decoration: BoxDecoration(
         color: widget.backgroundColor,
-        border: Border(
+        border: const Border(
           top: BorderSide(color: Color.fromARGB(255, 196, 196, 196)),
           bottom: BorderSide(color: Color.fromARGB(255, 196, 196, 196)),
           left: BorderSide(color: Color.fromARGB(255, 196, 196, 196)),
@@ -46,14 +46,14 @@ class _DefaultInputState extends State<DefaultInput> {
         ),
         borderRadius: BorderRadius.circular(8),
       ),
-      margin: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+      margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 5),
         child: TextFormField(
           controller: widget.controller,
           obscureText: !_passwordVisible && widget.password,
           decoration: InputDecoration(
-            contentPadding: EdgeInsets.symmetric(horizontal: 10),
+            contentPadding: const EdgeInsets.symmetric(horizontal: 10),
             filled: true,
             fillColor: widget.backgroundColor,
             labelText: widget.texto,

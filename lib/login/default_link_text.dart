@@ -22,7 +22,7 @@ class DefaultLinkText extends StatelessWidget {
           );
         },
         child: const Text(
-          "esqueci minha senha",
+          "Forgot your password",
           style: TextStyle(
             fontSize: 15,
             decoration: TextDecoration.underline,

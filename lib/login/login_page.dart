@@ -52,6 +52,18 @@ class LoginPage extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           const LoginWidget(),
+          const SizedBox(height: 50),
+          const Text(
+            """Enter your personal details
+  and start journey with us
+            """,
+            style: TextStyle(color: Colors.white, fontSize: 18),
+          ),
+          const SizedBox(height: 10),
+          const Text(
+            "SIGN UP",
+            style: TextStyle(color: Colors.white, fontSize: 30),
+          ),
         ],
       ),
     );
