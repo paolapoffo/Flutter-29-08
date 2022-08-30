@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/login/login_page.dart';
 import 'package:flutter_application_1/register/register_widget.dart';
@@ -5,10 +6,25 @@ import 'package:sign_button/constants.dart';
 import 'package:sign_button/create_button.dart';
 
 import '../login/default_title.dart';
+import '../model.dart';
+import '../get.dart';
 
-class RegisterPage extends StatelessWidget {
+class RegisterPage extends StatefulWidget {
+  const RegisterPage({Key? key}) : super(key: key);
 
-  const RegisterPage({ Key? key }) : super(key: key);
+  @override
+  State<RegisterPage> createState() => _RegisterPageState();
+}
+
+class _RegisterPageState extends State<RegisterPage> {
+  Repository repository = Repository(Dio());
+  late Future<List<Model>> news;
+
+  @override
+  void initState() {
+    news = repository.getAll();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -61,8 +77,8 @@ class RegisterPage extends StatelessWidget {
               const SizedBox(height: 30),
               const Text(
                 """To keep connected with us please 
-        login with your personal info
-                """,
+          login with your personal info
+                  """,
                 style: TextStyle(color: Colors.white, fontSize: 18),
               ),
               Container(
