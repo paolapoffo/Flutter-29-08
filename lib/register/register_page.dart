@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/login/login_page.dart';
+import 'package:flutter_application_1/register/register_widget.dart';
 import 'package:sign_button/constants.dart';
 import 'package:sign_button/create_button.dart';
 
-import '../register/register_page.dart';
-import 'default_title.dart';
-import 'login_widget.dart';
+import '../login/default_title.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class RegisterPage extends StatelessWidget {
+
+  const RegisterPage({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,13 +19,13 @@ class LoginPage extends StatelessWidget {
           physics: const BouncingScrollPhysics(),
           child: Column(
             children: [
-              const SizedBox(height: 35),
+              const SizedBox(height: 10),
               const DefaultTitle(
-                title: 'Sign In',
+                title: 'Create Account',
                 colortitle: Colors.white,
                 colorSubtitle: Colors.white,
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 15),
               SizedBox(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -47,24 +48,23 @@ class LoginPage extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(height: 30),
+              const SizedBox(height: 15),
               Text(
-                "or use your email account",
+                "or use your email for registration",
                 style: TextStyle(
                   color: Colors.grey.shade500,
                   fontSize: 20,
                 ),
               ),
-              const SizedBox(height: 20),
-              const LoginWidget(),
-              const SizedBox(height: 50),
+              const SizedBox(height: 10),
+              const RegisterWidget(),
+              const SizedBox(height: 30),
               const Text(
-                """Enter your personal details
-      and start journey with us
+                """To keep connected with us please 
+        login with your personal info
                 """,
                 style: TextStyle(color: Colors.white, fontSize: 18),
               ),
-              const SizedBox(height: 10),
               Container(
                 margin: const EdgeInsets.only(right: 15),
                 child: TextButton(
@@ -72,13 +72,13 @@ class LoginPage extends StatelessWidget {
                     Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (context) {
-                          return const RegisterPage();
+                          return const LoginPage();
                         },
                       ),
                     );
                   },
                   child: const Text(
-                    "SIGN UP",
+                    "SIGN IN",
                     style: TextStyle(
                       fontSize: 25,
                       decoration: TextDecoration.underline,

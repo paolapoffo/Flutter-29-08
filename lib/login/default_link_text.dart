@@ -9,24 +9,25 @@ class DefaultLinkText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(right: 15),
-      child: TextButton(
-        onPressed: () {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) {
-                return const LoginPage();
-              },
+    return Center(
+      child: Container(
+        margin: const EdgeInsets.only(right: 15),
+        child: TextButton(
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) {
+                  return const LoginPage();
+                },
+              ),
+            );
+          },
+          child: Text(
+            "Forgot your password ?",
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.grey.shade500,
             ),
-          );
-        },
-        child: const Text(
-          "Forgot your password",
-          style: TextStyle(
-            fontSize: 15,
-            decoration: TextDecoration.underline,
-            color: Colors.white,
           ),
         ),
       ),

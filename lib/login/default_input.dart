@@ -30,7 +30,6 @@ class _DefaultInputState extends State<DefaultInput> {
   void initState() {
     super.initState();
     _passwordVisible = false;
-   
   }
 
   @override
@@ -58,7 +57,7 @@ class _DefaultInputState extends State<DefaultInput> {
             fillColor: widget.backgroundColor,
             labelText: widget.texto,
             labelStyle: TextStyle(color: widget.textColor),
-            suffixIcon: IconButton(
+            prefixIcon: IconButton(
                 onPressed: () => setState(
                       () {
                         _passwordVisible = !_passwordVisible;

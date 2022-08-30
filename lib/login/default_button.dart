@@ -4,25 +4,24 @@ class DefaultButton extends StatelessWidget {
   final Widget? rota;
   final String buttonText;
   final double borderSize;
-  final Function()? func;
+  final Widget? color;
 
   const DefaultButton({
     Key? key,
     this.rota,
-    this.func,
     required this.buttonText,
-    this.borderSize = 3,
+    this.borderSize = 3, 
+    this.color,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: func,
+      onPressed: () {},
       style: ElevatedButton.styleFrom(
-        primary: Colors.white,
         side: BorderSide(
           width: borderSize,
-          color: Colors.white,
+          color: Colors.white
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
@@ -32,7 +31,7 @@ class DefaultButton extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 13, horizontal: 75),
         child: Text(
           buttonText,
-          style: const TextStyle(fontSize: 15),
+          style: const TextStyle(fontSize: 20),
         ),
       ),
     );

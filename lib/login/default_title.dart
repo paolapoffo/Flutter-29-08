@@ -19,7 +19,7 @@ class DefaultTitle extends StatelessWidget {
         Text(
           title,
           style: TextStyle(
-            fontSize: 40,
+            fontSize: 35,
             color: colortitle,
           ),
         ),
